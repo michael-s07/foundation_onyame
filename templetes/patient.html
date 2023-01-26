@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form action="patient" method="POST" class="row g-3">
+              {% csrf_token %}
+                <div class="col-md-8">
+                  <label for="date_registered" class="form-label">Date Registered</label>
+                  <input type="date" class="form-control" id="date_registered" name="date_registered">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="gender" class="form-label">Gender</label>
+                  <input type="text" class="form-control" id="gender" name="gender">
+                </div>
+                <div class="col-md-4">
+                  <label for="first_name" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="median_name" class="form-label">Median Name</label>
+                  <input type="text" class="form-control" id="median_name" name="median_name">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="last_name" class="form-label">Surname</label>
+                  <input type="text" class="form-control" id="last_name" name="last_name">
+                </div>
+
+                <div class="col-6">
+                  <label for="date_of_birth" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="date_of_birth" name="date_of_birth">
+                </div>
+                <div class="col-6">
+                  <label for="marital_status" class="form-label">Marital Status</label>
+                  <input type="text" class="form-control" id="marital_status" name ="martial_status" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-md-6">
+                  <label for="occupation" class="form-label">Occupation</label>
+                  <input type="text" class="form-control" id="occupation" name="occupation" name="occupation">
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="religion" class="form-label">Religion</label>
+                  <input type="text" class="form-control" id="religion" name="religion">
+                </div>
+               
+                <br>
+                <div class="col-md-4">
+                  <label for="address" class="form-label">Address </label>
+                  <input type="text" class="form-control" id="address" name="address">
+                </div>
+                <div class="col-md-4">
+                  <label for="mobile" class="form-label">Mobile Number</label>
+                  <input type="text" class="form-control" id="mobile" name="mobile">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="email" class="form-label">E-Mail</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="nhis_number" class="form-label">NHIS Number</label>
+                  <input type="text" class="form-control" id="nhis_number" name="nhis_number">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="relative_name" class="form-label">Relative Name</label>
+                  <input type="text" class="form-control" id="relative_name" name="relative_name">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="relative_address" class="form-label">Relative Address</label>
+                  <input type="text" class="form-control" id="relative_address" name = "relative_address">
+                </div>
+
+                <div class="col-md-4">
+                  <label for="relative_contact" class="form-label">Relative Contact</label>
+                  <input type="text" class="form-control" id="relative_contact" name="relative_contact">
+                </div>
+                <br>
+                <div class="col-2 mt-4 offset-md-10">
+                  <button type="submit" class="btn btn-success">Register</button>
+        
+                </div>
+              </form>
+        </div>
+        <div class="col-4">
+            <p>messages</p>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
