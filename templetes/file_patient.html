@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Martital Status</th>
+        <th scope="col">Occupation</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in obj %}
+      <tr>
+        <th scope="row">{{ i.id }}</th>
+        <td>{{ i.first_name|title }}</td>
+        <td>{{ i.last_name|title }}</td>
+        <td>{{ i.date_of_birth }}</td>
+        <td>{{ i.martial_status }}</td>
+        <td>{{ i.occupation }}</td>
+        <td>{{ i.mobile }}</td>
+        <td>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-success">View</button>
+        </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content%}
